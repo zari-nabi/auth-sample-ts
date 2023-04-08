@@ -1,5 +1,5 @@
-const NotFound = ()=>{
+const UnAuth = ()=>{
     return <></>
 };
 
-export default NotFound;
+export default UnAuth;
