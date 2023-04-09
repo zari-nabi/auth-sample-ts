@@ -1,0 +1,13 @@
+@use "../../theme" as *;
+
+.button{
+    background-color: $primary-color;
+    border-radius: 4px;
+    padding: 0.3rem 1rem;
+    font-size:small;
+    color:$light-color;
+    border:none;
+    &:hover{
+      transform: scale(1.02);
+    }
+}

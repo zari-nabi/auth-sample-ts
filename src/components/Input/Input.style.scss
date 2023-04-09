@@ -1,0 +1,16 @@
+@use "../../theme" as *;
+
+.input {
+	border: 1px solid $medium-color;
+	border-radius: 8px;
+	margin: 0.5rem;
+	width: 85%;
+	height: 2rem;
+};
+
+.label {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	justify-content: space-between;
+};
