@@ -1,16 +1,18 @@
-import { useContext, useState } from "react";
+import {  useState } from "react";
 import { toast } from "react-toastify";
 import Button from "../../components/Button/Button";
 import Container from "../../components/Container/Container";
 import Input from "../../components/Input/Input";
-import { AuthContext } from "../../Context/authContext";
+import useAuth from "../../hook/useAuth";
 import { ILogin } from "../../model/login";
 import { login } from "../../services/login";
 import "./Login.style.scss";
 
 const Login = () => {
-    const { handleLogin } = useContext(AuthContext);
+    const { handleLogin } = useAuth();
+
     const [formData, setFormData] = useState<ILogin>({ email: "", password: "" });
+    
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });

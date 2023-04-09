@@ -1,9 +1,8 @@
-import { useContext } from "react";
 import { Navigate, Outlet } from "react-router-dom";
-import { AuthContext } from "../Context/authContext";
+import useAuth from "../hook/useAuth";
 
 const Auth = () => {
-    const { isAuthenticated } = useContext(AuthContext);
+    const { isAuthenticated } = useAuth();
     
     return isAuthenticated ? <Outlet /> : <Navigate to="/unAuth" />
 

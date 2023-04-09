@@ -1,11 +1,10 @@
 
-import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../Context/authContext";
+import useAuth from "../../hook/useAuth";
 import "./Navbar.style.scss";
 
 const Navbar = () => {
-    const { isAuthenticated,handleLogout } = useContext(AuthContext);
+    const { isAuthenticated,handleLogout } = useAuth();
     return (
         <div className="navbar">
             <div className="navbar__left">

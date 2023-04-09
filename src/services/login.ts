@@ -1,10 +1,11 @@
-import axios from "axios"
+import useAxios from "../hook/useAxios";
 import { ILogin } from "../model/login";
-import { baseUrl } from "./baseUrl"
+
+const axiosInstance=useAxios();
 
 export const login = (data:ILogin)=>{
     try {
-        const response = axios.post(`${baseUrl}/login`,data);
+        const response = axiosInstance.post(`/login`,data);
         return response;
     } catch (error) {
         
