@@ -16,7 +16,7 @@ const AllRoutes = () => {
             <Route element={<Auth />}>
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/users">
-                    <Route element={<Users />} />
+                    <Route index element={<Users />} />
                     <Route path=":id" element={<UserDetail />} />
                 </Route>
             </Route>

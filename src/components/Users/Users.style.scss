@@ -1,0 +1,23 @@
+@use "../../theme" as *;
+
+@mixin base{
+    display: flex;
+    align-items: center;
+    gap:2rem;
+    padding: 1rem;
+}
+
+.list{
+    @include base;
+    justify-content: flex-start;
+}
+
+.detail{
+    @include base;
+    flex-direction: column;
+    justify-content: center;
+}
+
+img{
+    border-radius: 50%;
+}

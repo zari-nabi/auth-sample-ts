@@ -4,6 +4,7 @@ import Button from "../../components/Button/Button";
 import Container from "../../components/Container/Container";
 import Input from "../../components/Input/Input";
 import useAuth from "../../hook/useAuth";
+import useAxios from "../../hook/useAxios";
 import { ILogin } from "../../model/login";
 import { login } from "../../services/login";
 import "./Login.style.scss";
@@ -12,15 +13,17 @@ const Login = () => {
     const { handleLogin } = useAuth();
 
     const [formData, setFormData] = useState<ILogin>({ email: "", password: "" });
-    
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
 
+    const axiosInstance = useAxios();
+
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const response = await login(formData);
+        const response = await login(axiosInstance,formData);
         response && handleLogin(response?.data?.token);
         !response && toast.error('Login Failed');
     }
@@ -47,7 +50,7 @@ const Login = () => {
                         type="password"
                         textError="required"
                     />
-                    <Button>Login</Button>
+                    <Button handleClick={()=>{}}>Login</Button>
                 </div>
             </form>
             <p>This app use mock api. sample email and password is:</p>

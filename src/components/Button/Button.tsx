@@ -1,9 +1,13 @@
-import { IChildren } from "../../model/model";
 import "./Button.style.scss";
 
-const Button = ({children}:IChildren)=>{
+interface IButtonProps {
+    children: React.ReactNode;
+    handleClick: React.MouseEventHandler<HTMLButtonElement>
+}
+
+const Button: React.FC<IButtonProps> = ({ children, handleClick }) => {
     return (
-        <button className="button">{children}</button>
+        <button className="button" onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => handleClick(e)}>{children}</button>
     )
 };
 
