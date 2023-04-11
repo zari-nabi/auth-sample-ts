@@ -9,3 +9,5 @@ export interface IUser {
 export interface IUserList {
     data: IUser[];
 };
+
+  

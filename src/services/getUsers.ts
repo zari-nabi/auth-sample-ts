@@ -8,9 +8,9 @@ export const getUsers = (axiosInstance: any) => {
     }
 };
 
-export const getUserDetail = (axiosInstance: any, id?: string) => {
+export const getUserDetail = async(axiosInstance: any, id?: string) => {
     try {
-        const response = axiosInstance.get(`/users/${id}`);
+        const response = await axiosInstance.get(`/users/${id}`);
         return response;
     } catch (error) {
 

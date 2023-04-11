@@ -12,7 +12,7 @@ const AuthProvider = ({ children }: IAuthProvider) => {
     const navigate = useNavigate();
 
     const isAuth = !!localStorage.getItem("token");
-    const [isAuthenticated, setIsAuthenticated] = useState(isAuth);
+    const [isAuthenticated, setIsAuthenticated] = useState<boolean>(isAuth);
 
     const handleLogin = (token: string) => {
         setIsAuthenticated(true);

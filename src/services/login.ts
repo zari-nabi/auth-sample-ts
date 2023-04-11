@@ -1,10 +1,10 @@
 import { ILogin } from "../model/login";
 
-export const login = (axiosInstance:any,data:ILogin)=>{
+export const login = async (axiosInstance: any, data: ILogin) => {
     try {
-        const response = axiosInstance.post(`/login`,data);
+        const response = await axiosInstance.post(`/login`, data);
         return response;
     } catch (error) {
-        
+
     }
 }
