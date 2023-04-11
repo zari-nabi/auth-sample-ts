@@ -15,6 +15,14 @@ const UserDetail = () => {
     const [user, setUser] = useState<IUser>();
     const [loading, setLoading] = useState<boolean>();
 
+    //-----------------------------------
+    /**
+    * Fetches the user data by id and sets it to the current items state.
+    * @param {number} id - The id of the user to fetch.
+    * @returns {Promise} A promise that resolves to the response data.
+    */
+    //-------------------------------------
+
     const handleGetUserDetail = async () => {
         setLoading(true);
         const response = await getUserDetail(axiosInstance, id);
@@ -32,7 +40,7 @@ const UserDetail = () => {
 
     return (
         <Container>
-            <Spinner loading={loading}/>
+            <Spinner loading={loading} />
             <UserItem
                 key={id}
                 user={user}

@@ -8,6 +8,11 @@ import UserDetail from "../pages/users/UserDetail";
 import Users from "../pages/users/Users";
 import Auth from "./Auth";
 
+/**
+* A custom router component that uses useRoutes hook from react-router to define and render routes.
+* @returns {JSX.Element} The component that renders the appropriate page based on the current URL path.
+*/
+
 const AllRoutes = () => {
     return (
         <Routes>

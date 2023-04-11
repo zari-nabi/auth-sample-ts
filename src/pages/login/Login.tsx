@@ -10,6 +10,13 @@ import { ILogin } from "../../model/login";
 import { login } from "../../services/login";
 import "./Login.style.scss";
 
+//=============================
+/**
+ * The Login component displays the Login component.
+ * @returns {JSX.Element} The Login component.
+ */
+//==============================
+
 const Login = () => {
     const { handleLogin } = useAuth();
 
