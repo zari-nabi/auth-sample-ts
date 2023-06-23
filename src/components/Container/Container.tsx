@@ -1,4 +1,3 @@
-import React,{ ReactNode } from "react";
 import { IChildren } from "../../model/model";
 import "./Container.style.scss";
 

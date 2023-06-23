@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import Button from './components/Button/Button';
 import Navbar from './components/Navbar/Navbar';
 import AllRoutes from './routes/AllRouts';
 

@@ -51,7 +51,7 @@ const Login = () => {
                         onChange={handleChange}
                         required={true}
                         type="text"
-                        textError="required"
+                        textError="Please enter a valid email address"
                     />
                     <Input
                         name="password"
